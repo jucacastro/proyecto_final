@@ -7,9 +7,29 @@
 </head>
 <body>
     <header> 
-        <h1> BIENVENIDO AL ECOMMERCE DE SUPLEMENTOS Y ACCESORIOS DEPORTIVOS GLOBAL NUTRICiON</h1>
+        <h1> BIENVENIDO AL ECOMMERCE DE SUPLEMENTOS Y ACCESORIOS DEPORTIVOS GLOBAL NUTRICION</h1>
         <img src="" alt="imagen logo">
         <p> por favor llena el registro para ir a la lista de productos que tenemos para ofrecerte </p>
     </header>
+    <nav> 
+        <a href="listadoProducos.html"> iniciar compra</a>
+       <button onclick="limpiarCampos()"> limpiar campos de registro </button>
+    </nav>
+    <main class="principal">
+        <section class="registro">
+            <label for="nombre-comprador">Nombre del Comprador</label><br>
+            <input type="text" id="nComprador" name="nombre-comprador" /><br>
+            <label for="presupuesto-maximo"> Presupuesto Maximo</label><br>
+            <input type="number" id="pMaximo" name="presupuesto-maximo" /><br>
+            <label for="presupuesto-maximo"> Presupuesto Maximo</label><br>
+            <input type="number" id="pMaximo" name="presupuesto-maximo" /><br>
+            <label for="cantidad-maximo"> cantidad Maxima de productos</label><br>
+            <input type="number" id="cMaximo" name="cantidad-maximo" /><br>
+                <label for="estado"> como desea recibir su compra</label>
+                <input type="radio" name="estado" value="domicilio"> domicilio
+                <input type="radio" name="estado" value="tienda"> en tienda  
+        </section>
+    </main>
+    <footer class="pie-pagina"></footer>
 </body>
 </html>
