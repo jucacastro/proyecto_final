@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/registro.css">
     <title>REGISTRO</title>
 </head>
 <body>
-    <header> 
+    <header class="encabezado"> 
         <h1> BIENVENIDO AL ECOMMERCE DE SUPLEMENTOS Y ACCESORIOS DEPORTIVOS GLOBAL NUTRICION</h1>
-        <img src="" alt="imagen logo">
-        <p> por favor llena el registro para ir a la lista de productos que tenemos para ofrecerte </p>
+        <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
+        <article class="indicacion"> 
+            <p> por favor llena el registro para ir a la lista de productos que tenemos para ofrecerte </p>
+    </article>
     </header>
-    <nav> 
-        <a href="listadoProducos.html"> iniciar compra</a>
-       <button onclick="limpiarCampos()"> limpiar campos de registro </button>
-    </nav>
     <main class="principal">
-        <section class="registro">
+        <form class="registro">
             <label for="nombre-comprador">Nombre del Comprador</label><br>
             <input type="text" id="nComprador" name="nombre-comprador" /><br>
             <label for="presupuesto-maximo"> Presupuesto Maximo</label><br>
             <input type="number" id="pMaximo" name="presupuesto-maximo" /><br>
-            <label for="presupuesto-maximo"> Presupuesto Maximo</label><br>
+            <label for="cantidad-maximo"> Cantidad Maxima</label><br>
             <input type="number" id="pMaximo" name="presupuesto-maximo" /><br>
             <label for="cantidad-maximo"> cantidad Maxima de productos</label><br>
             <input type="number" id="cMaximo" name="cantidad-maximo" /><br>
                 <label for="estado"> como desea recibir su compra</label>
                 <input type="radio" name="estado" value="domicilio"> domicilio
                 <input type="radio" name="estado" value="tienda"> en tienda  
-        </section>
+        </form>
     </main>
-    <footer class="pie-pagina"></footer>
+    <nav> 
+        <a href="listadoProducos.html"> iniciar compra</a>
+       <button onclick="limpiarCampos()"> limpiar campos de registro </button>
+    </nav>
+    <footer class="pie-pagina"><p> @ creado por juan carlos </p></footer>
 </body>
 </html>
