@@ -7,8 +7,8 @@
 body {
     padding: 0;
     margin: 0; 
-    background-color: #F3F4F6; /* Fondo gris claro */
-    background-color: #E0F2FE; /* Fondo azul muy claro */
+    background-color: #0bfa3bcd; /* Fondo gris claro */
+    
 }
 
 h1{
@@ -28,6 +28,9 @@ h1{
     border-radius: 10px;
     flex-direction: column;
 }
+.indicacion{
+    align-self: center;
+}
 
 .logo{
     border-radius: 300px;
@@ -44,12 +47,29 @@ p{
 }
 
 .principal{
-    border: 4px solid #9CA3AF; /* Borde gris oscuro */
-    background-color: #D1FAE5; /* Fondo verde menta claro */
+    border: 4px solid #D1D5DB; /* Borde gris suave */
+    background-color: #E5E7EB; /* Fondo gris más claro */
     border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espaciado interno para el contenedor principal */
+   
 }
-.indicacion{
-    align-self: center;
+
+.registro{
+    display: flex;             
+    flex-direction: column;    
+    align-items: center;       
+    width: 100%;             
+}
+
+.navegador {
+    display: flex;
+    border: 4px solid #D1D5DB; /* Borde gris suave */
+    background-color: #E5E7EB; /* Fondo gris más claro */
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
 }
 
 
