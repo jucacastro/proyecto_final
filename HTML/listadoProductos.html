@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLOBAL NUTRITION CATALOGO</title>
-    <link rel="stylesheet" href="../CSS/listadoProductos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos - Global Gym</title>
+  <link rel="stylesheet" href="../CSS/registro.css">
 </head>
 <body>
-    <header class="encabezado"> 
-        <h1> BIENVENIDO AL CATALOGO DE PRODUCTOS DE GLOBAL GYM</h1>
-        <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
-            <img class="icono" src="../IMG/icono.jpg" alt="imagen logo">    
-    </header>
-    <nav>
-        <button>cancelar compra </button>
-        <a href="../HTML/"></a>
-    </nav>
-    <main class=" principal">
-        <section>
+  <header>
+    <h1>Catálogo de Productos</h1>
+    <h1>GLOBAL GYM</h1>
+  </header>
 
-        </section>
-        <aside>
+  <nav>
+    <a href="#">Cancelar Compra</a>
+    <a href="#">Completar Compra</a>
+    <select id="filtro1">
+      <option>Filtro del Primer Atributo</option>
+    </select>
+    <select id="filtro2">
+      <option>Filtro del Segundo Atributo</option>
+    </select>
+    <button>Filtrar</button>
+    <button>Limpiar Filtros</button>
+  </nav>
+  <main>
+    <section id="catalogo">
+      <article class="producto">
+        <img src="ruta-imagen.jpg" alt="Imagen del Producto">
+        <p>Nombre del Producto</p>
+        <p>Precio: $XX</p>
+        <p>Descripción breve del producto</p>
+        <button>Ver más detalles</button>
+      </article>
+    </section>
+    <aside>
+      <article id="detalle-producto">
+        <img src="ruta-imagen.jpg" alt="Imagen del Producto">
+        <p>ID: ###</p>
+        <p>Nombre: Producto Seleccionado</p>
+        <p>Precio: $XX</p>
+        <p>Categoría: Suplementos</p>
+        <label for="cantidad">Cantidad a Comprar:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+      </article>
+    </aside>
+  </main>
 
-        </aside>
-    </main>
 </body>
 </html>
