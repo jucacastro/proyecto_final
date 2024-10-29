@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Productos - Global Gym</title>
-  <link rel="stylesheet" href="../CSS/registro.css">
+  <link rel="stylesheet" href="../CSS/listadoProductos.css">
 </head>
 <body>
-  <header>
-    <h1>Catálogo de Productos</h1>
-    <h1>GLOBAL GYM</h1>
+  <header class=" encabezado">
+    <h1>CATÁLOGO DE PRODUCTOS</h1>
     <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
+    <p> podras observar todo el catalogo de productos que tenemos para ofrencerte</p>
   </header>
 
   <nav>
@@ -25,18 +25,19 @@
     <button>Filtrar</button>
     <button>Limpiar Filtros</button>
   </nav>
-  <main>
-    <section id="catalogo">
+  <main class=" principal">
+    <section class="catalogo">
       <article class="producto">
-        <img src="ruta-imagen.jpg" alt="Imagen del Producto">
-        <p>Nombre del Producto</p>
-        <p>Precio: $XX</p>
+        <img src="../IMG/aminoacidos-general.jpg" alt="Imagen de un aminoacido">
+        <p>Aminoácido de 2 lb</p>
+        <p>Precio:</p>
+        <span>80000</span>
         <p>Descripción breve del producto</p>
         <button>Ver más detalles</button>
       </article>
     </section>
     <aside>
-      <article id="detalle-producto">
+      <article class="detalle-producto">
         <img src="ruta-imagen.jpg" alt="Imagen del Producto">
         <p>ID: ###</p>
         <p>Nombre: Producto Seleccionado</p>
@@ -44,9 +45,9 @@
         <p>Categoría: Suplementos</p>
         <label for="cantidad">Cantidad a Comprar:</label>
         <input type="number" id="cantidad" name="cantidad" min="1" max="10">
+        <button> agregar al carrito</button>
       </article>
     </aside>
   </main>
-
 </body>
 </html>
