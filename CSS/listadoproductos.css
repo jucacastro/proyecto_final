@@ -37,7 +37,7 @@ h1 {
     height: 150px;
 }
 
-nav {
+.navegador {
     display: flex;
     justify-content: center; /* Centra el contenido */
     align-items: center;
@@ -45,11 +45,12 @@ nav {
     background-color: white; /* Gris oscuro para fondo */
     padding: 15px;
     border-radius: 10px;
-    margin: 20px auto; /* Centrado y margen arriba y abajo */
-    max-width: 80%; /* Limita el ancho */
+    margin: 20px auto;
+    max-width: 80%; 
+    flex-wrap: wrap; 
 }
 
-nav a {
+.navegador a {
     color: #fff;
     text-decoration: none;
     padding: 8px 15px;
@@ -132,4 +133,8 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+.oculto {
+    display: none;
 }

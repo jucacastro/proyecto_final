@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="../CSS/listadoProductos.css">
 </head>
 <body>
-  <header class=" encabezado">
+  <header class="encabezado">
     <h1>CATÁLOGO DE PRODUCTOS</h1>
     <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
-    <p> podras observar todo el catalogo de productos que tenemos para ofrencerte</p>
+    <p>Podrás observar todo el catálogo de productos que tenemos para ofrecerte.</p>
   </header>
 
-  <nav>
-    <a href="#">Cancelar Compra</a>
-    <a href="#">Completar Compra</a>
+  <nav class="navegador">
+    <a href="../HTML/registro.html">Cancelar Compra</a>
+    <a href="../HTML/carrito">Completar Compra</a>
     <select id="filtro1">
       <option>Filtro del Primer Atributo</option>
     </select>
@@ -25,29 +25,26 @@
     <button>Filtrar</button>
     <button>Limpiar Filtros</button>
   </nav>
-  <main class=" principal">
+
+  <main class="principal">
     <section class="catalogo">
-      <article class="producto">
-        <img src="../IMG/aminoacidos-general.jpg" alt="Imagen de un aminoacido">
-        <p>Aminoácido de 2 lb</p>
-        <p>Precio:</p>
-        <span>80000</span>
-        <p>Descripción breve del producto</p>
-        <button>Ver más detalles</button>
-      </article>
     </section>
-    <aside>
+    <aside class="oculto">
       <article class="detalle-producto">
-        <img src="ruta-imagen.jpg" alt="Imagen del Producto">
-        <p>ID: ###</p>
-        <p>Nombre: Producto Seleccionado</p>
-        <p>Precio: $XX</p>
-        <p>Categoría: Suplementos</p>
-        <label for="cantidad">Cantidad a Comprar:</label>
-        <input type="number" id="cantidad" name="cantidad" min="1" max="10">
-        <button> agregar al carrito</button>
+        <img id="imagenGrande" alt="">
+        <p id="nombreArtGrande"></p>
+        <span id="valorPrecioGrande"></span>
+        <span id="stockGrande"></span>
+        <p id="idProducto"></p>
+        <span id="precioGrande"></span>
+        <p id="categoria"></p>
+        <label for="cantidad">cantidad a comprar</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="20">
+        <button id="agregar-carrito">agregar al carrito</button>
       </article>
     </aside>
   </main>
+  
+  <script src="../JS/productos.js"></script>
 </body>
 </html>
