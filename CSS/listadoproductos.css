@@ -138,3 +138,27 @@ button:hover {
 .oculto {
     display: none;
 }
+
+aside img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 8px; /* Opcional: dar borde redondeado */
+  }
+
+  .detalle-producto {
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #D1D5DB;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 10px; 
+}

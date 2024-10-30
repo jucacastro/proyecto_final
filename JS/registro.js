@@ -1,10 +1,10 @@
 document.getElementById("iniciarCompra").addEventListener("click", function(validar) {
     validar.preventDefault();
 
-    const nombreComprador = document.getElementById("nComprador").value.trim();
-    const presupuestoMaximo = document.getElementById("pMaximo").value.trim();
-    const cantidadMaxima = document.getElementById("cMaxima").value.trim();
-    const direccion = document.getElementById("direccion").value.trim();
+    const nombreComprador = document.getElementById("nComprador").value;
+    const presupuestoMaximo = document.getElementById("pMaximo").value;
+    const cantidadMaxima = document.getElementById("cMaxima").value;
+    const direccion = document.getElementById("direccion").value;
     const metodoEntrega = document.querySelector('input[name="estado"]:checked');
     let entregaSeleccionada = "";
         if (metodoEntrega) {
@@ -35,11 +35,11 @@ document.getElementById("iniciarCompra").addEventListener("click", function(vali
         return;
     }
 
-    localStorage.setItem("nombreComprador", nombreComprador);
+    /*localStorage.setItem("nombreComprador", nombreComprador);
     localStorage.setItem("presupuestoMaximo", `$${parseInt(presupuestoMaximo).toLocaleString('es-CO')}`);
     localStorage.setItem("cantidadMaxima", cantidadMaxima);
     localStorage.setItem("direccion", direccion);
-    localStorage.setItem("entregaSeleccionada", entregaSeleccionada);
+    localStorage.setItem("entregaSeleccionada", entregaSeleccionada);*/
 
    
     window.location.href = "../HTML/listadoProductos.html";
