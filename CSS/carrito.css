@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0ef43c;
+    font-family: Arial, sans-serif;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #00ff00;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: #333;
+    margin: 10px 0;
+}
+
+.principal {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+section {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+aside {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside label, aside input, aside select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="number"], input[type="password"], select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+select {
+    background-color: #f9f9f9;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-top: 20px;
+}
+
+a, button {
+    background-color: #07f507;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none; /* Remueve bordes si es necesario */
+    margin: 3px;
+}
+
+button:hover, a:hover {
+    background-color: #15671c;
+}
+
+.pie-pagina {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 2px solid #00ff00;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+

@@ -16,11 +16,12 @@
     <a href="../HTML/registro.html">Cancelar Compra</a>
     <a href="../HTML/carrito">Completar Compra</a>
     <select id="filtro1">
-      <option>Filtro del Primer Atributo</option>
+      <option id="categoria">categoria</option>
+       <option id="precuo">precio</option>
     </select>
-    <select id="filtro2">
-      <option>Filtro del Segundo Atributo</option>
-    </select>
+    <div id="filtro2">
+      <input type="text" id="filtro-proveedor" placeholder="filtro-proveedor" >
+    </div>
     <button>Filtrar</button>
     <button>Limpiar Filtros</button>
   </nav>
@@ -32,15 +33,16 @@
       <article class="detalle-producto">
         <img id="imagenGrande" alt="">
         <p id="nombreArtGrande"></p>
-        <span id="valorPrecioGrande"></span>
+        <span id="proveedor"></span>
         <span id="stockGrande"></span>
         <p id="idProducto"></p>
-        <span id="precioGrande"></span>
+        <span id="precioGrande"></span> <!-- Cambia esto a 'precioGrande' -->
         <p id="categoria"></p>
         <label for="cantidad">cantidad a comprar</label>
         <input type="number" id="cantidad" name="cantidad" min="1" max="20">
         <button id="agregar-carrito">agregar al carrito</button>
       </article>
+  
     </aside>
   </main>
   

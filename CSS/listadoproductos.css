@@ -144,7 +144,7 @@ aside img {
     max-height: 300px;
     width: auto;
     height: auto;
-    border-radius: 8px; /* Opcional: dar borde redondeado */
+    border-radius: 20px; 
   }
 
   .detalle-producto {
@@ -153,12 +153,11 @@ aside img {
     background-color: #fff;
     border: 1px solid #D1D5DB;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
     text-align: center;
     position: sticky;
     top: 10px; 
 }
+
