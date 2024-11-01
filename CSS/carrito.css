@@ -110,7 +110,7 @@ a, button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    border: none; /* Remueve bordes si es necesario */
+    border: none; 
     margin: 3px;
 }
 
@@ -130,3 +130,7 @@ button:hover, a:hover {
     max-width: 1200px;
 }
 
+.eliminar {
+    background-color: red;
+    color: white;
+}

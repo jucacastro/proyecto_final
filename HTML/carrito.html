@@ -20,18 +20,19 @@
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
-                        <th>eliminar</th> 
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td id="img"></td>
-                        <td id="nombre"></td>
-                        <td id="precio"></td>
-                        <td id="stock"></td>
-                    </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td id="total-precio" colspan="2">$0</td>
+                    </tr>
+                </tfoot>
             </table>
+            
         </section>
         <aside>
             <label for="tarjeta">Ingrese su número de tarjeta</label>
@@ -69,7 +70,7 @@
             <input type="text" id="nombre-titular" name="nombre-titular" title="Debe tener entre 13 y 19 dígitos">
 
             <div class="contenedor-botones">
-                <a id="completar-compra" href="../HTML/registro.html">Completar Compra</a>
+                <a id="completar-compra" href="../HTML/registro.html">Seguir Comprando</a>
                 <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
             </div>
         </aside>

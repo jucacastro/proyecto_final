@@ -39,10 +39,10 @@ h1 {
 
 .navegador {
     display: flex;
-    justify-content: center; /* Centra el contenido */
+    justify-content: center; 
     align-items: center;
-    gap: 15px; /* Espacio entre los elementos */
-    background-color: white; /* Gris oscuro para fondo */
+    gap: 15px; 
+    background-color: white; 
     padding: 15px;
     border-radius: 10px;
     margin: 20px auto;
@@ -54,7 +54,7 @@ h1 {
     color: #fff;
     text-decoration: none;
     padding: 8px 15px;
-    background-color: #0ef43c; /* Verde para los botones */
+    background-color: #0ef43c;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;

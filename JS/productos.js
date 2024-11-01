@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filtrarBtn = document.getElementById('filtrar-btn');
   const limpiarFiltrosBtn = document.getElementById('limpiar-filtros');
 
-  aside.classList.add('oculto'); // Aseguramos que el aside esté oculto al inicio
+  aside.classList.add('oculto'); 
   
   let productosCargados = 0; 
   const productosPorPagina = 15;
