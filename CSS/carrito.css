@@ -98,7 +98,7 @@ select {
 .contenedor-botones {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra los botones horizontalmente */
+    justify-content: center;
     margin-top: 20px;
 }
 

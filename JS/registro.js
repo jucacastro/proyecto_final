@@ -35,11 +35,11 @@ document.getElementById("iniciarCompra").addEventListener("click", function(vali
         return;
     }
 
-    /*localStorage.setItem("nombreComprador", nombreComprador);
+    localStorage.setItem("nombreComprador", nombreComprador);
     localStorage.setItem("presupuestoMaximo", `$${parseInt(presupuestoMaximo).toLocaleString('es-CO')}`);
     localStorage.setItem("cantidadMaxima", cantidadMaxima);
     localStorage.setItem("direccion", direccion);
-    localStorage.setItem("entregaSeleccionada", entregaSeleccionada);*/
+    localStorage.setItem("entregaSeleccionada", entregaSeleccionada);
 
    
     window.location.href = "../HTML/listadoProductos.html";

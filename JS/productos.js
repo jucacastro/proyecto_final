@@ -18,10 +18,10 @@
     { id: 17, nombre: "Cinturón para levantamiento", stock: 25, img: "../IMG/cinturon.jpg", categoria: "deportivo", precio: 60000, proveedor: "sport line" },
     { id: 18, nombre: "Cinturón de cuero", stock: 15, img: "../IMG/cinturon.jpg", categoria: "deportivo", precio: 80000, proveedor: "sport line" },
     { id: 19, nombre: "Cinturón de neopreno", stock: 18, img: "../IMG/cinturon.jpg", categoria: "deportivo", precio: 70000, proveedor: "sport line" },
-    { id: 20, nombre: "Guantes de gimnasio S", stock: 20, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "sport line" },
-    { id: 21, nombre: "Guantes de gimnasio M", stock: 18, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "sport line" },
-    { id: 22, nombre: "Guantes de gimnasio L", stock: 15, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "sport line" },
-    { id: 23, nombre: "Guantes de gimnasio XL", stock: 12, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "sport line" },
+    { id: 20, nombre: "Guantes de gimnasio S", stock: 20, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
+    { id: 21, nombre: "Guantes de gimnasio M", stock: 18, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
+    { id: 22, nombre: "Guantes de gimnasio L", stock: 15, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
+    { id: 23, nombre: "Guantes de gimnasio XL", stock: 12, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
     { id: 24, nombre: "Rodillera deportiva", stock: 30, img: "../IMG/rodillera.jpg", categoria: "deportivo", precio: 50000, proveedor: "sport line" },
     { id: 25, nombre: "Muñequera de soporte", stock: 25, img: "../IMG/muñequera.jpg", categoria: "deportivo", precio: 25000, proveedor: "sport line" },
     { id: 26, nombre: "Soporte de codo", stock: 20, img: "../IMG/soporte-codo.jpg", categoria: "deportivo", precio: 20000, proveedor: "sport line" },
@@ -41,25 +41,30 @@
     { id: 40, nombre: "Banda de resistencia alta", stock: 15, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 40000, proveedor: "sport line" },
   ];
 
-  //localStorage.setItem('productos', JSON.stringify(productos));
+
+  localStorage.setItem('productos', JSON.stringify(productos));
 
 document.addEventListener('DOMContentLoaded', () => {
   const productosGuardados = JSON.parse(localStorage.getItem('productos'));
   const catalogo = document.querySelector('.catalogo');
   const aside = document.querySelector('aside');
-  aside.classList.add('oculto');
+  const filtro1 = document.getElementById('filtro1');
+  const filtroProveedor = document.getElementById('filtro-proveedor');
+  const filtrarBtn = document.getElementById('filtrar-btn');
+  const limpiarFiltrosBtn = document.getElementById('limpiar-filtros');
 
-  let productosCargados = 0; // Contador de productos cargados
+  aside.classList.add('oculto'); // Aseguramos que el aside esté oculto al inicio
+  
+  let productosCargados = 0; 
   const productosPorPagina = 15;
 
-  // Función para cargar los productos
-  function cargarProductos() {
-    const productosParaMostrar = productosGuardados.slice(productosCargados, productosCargados + productosPorPagina);
+  function cargarProductos(productosParaCargar) {
+    const productosParaMostrar = productosParaCargar.slice(productosCargados, productosCargados + productosPorPagina);
     
     if (productosParaMostrar.length === 0) {
       alert("No hay más productos para mostrar.");
       window.removeEventListener('scroll', scrollInfinito);
-      return; // Detenemos la ejecución si no hay más productos
+      return; 
     }
 
     productosParaMostrar.forEach(producto => {
@@ -77,43 +82,92 @@ document.addEventListener('DOMContentLoaded', () => {
       catalogo.appendChild(article);
     });
 
-    productosCargados += productosPorPagina; // Aumentamos el contador
+    productosCargados += productosPorPagina; 
   }
 
-  // Función para manejar el evento de scroll
   function scrollInfinito() {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-      cargarProductos(); // Cargar más productos al hacer scroll
+      cargarProductos(productosGuardados);
     }
   }
 
-  // Agregamos el evento de scroll al window
+  function mostrarDetallesProducto(producto) {
+    if (producto) {
+        document.getElementById('imagenGrande').src = producto.img;
+        document.getElementById('nombreArtGrande').textContent = producto.nombre;
+        document.getElementById('proveedor').textContent = `Proveedor: ${producto.proveedor}`;
+        document.getElementById('stockGrande').textContent = `Stock: ${producto.stock}`;
+        document.getElementById('idProducto').textContent = `ID: ${producto.id}`;
+        document.getElementById('precioGrande').textContent = `Precio: $${producto.precio.toLocaleString('es-CO')}`;
+        document.getElementById('categoria').textContent = `Categoría: ${producto.categoria}`;
+        aside.classList.remove('oculto'); // Mostrar el aside al seleccionar un producto
+        
+        // Asignar evento al botón de agregar al carrito
+        const agregarCarritoBtn = document.getElementById('agregar-carrito');
+        agregarCarritoBtn.onclick = () => agregarAlCarrito(producto);
+    } else {
+        console.error('Producto no encontrado');
+    }
+}
+  function filtrarProductos() {
+    const categoriaSeleccionada = filtro1.value;
+    const proveedorSeleccionado = filtroProveedor.value.toLowerCase();
+
+    const productosFiltrados = productosGuardados.filter(producto => {
+      const coincideCategoria = categoriaSeleccionada ? producto.categoria === categoriaSeleccionada : true;
+      const coincideProveedor = proveedorSeleccionado ? producto.proveedor.toLowerCase().includes(proveedorSeleccionado) : true;
+      return coincideCategoria && coincideProveedor; // Filtra productos que coincidan con ambos
+    });
+
+    catalogo.innerHTML = ''; // Limpiamos el catálogo antes de cargar productos filtrados
+    productosCargados = 0; // Reiniciar contador de productos cargados
+    cargarProductos(productosFiltrados); // Cargar productos filtrados
+  }
+
   window.addEventListener('scroll', scrollInfinito);
+  cargarProductos(productosGuardados);
 
-  // Cargamos los primeros productos
-  cargarProductos();
-
-  const botonesDetalles = document.querySelectorAll('.ver-detalles');
-  botonesDetalles.forEach(boton => {
-    boton.addEventListener('click', (e) => {
+  // Delegación de eventos para los botones de ver detalles
+  catalogo.addEventListener('click', (e) => {
+    if (e.target.classList.contains('ver-detalles')) {
       const idProducto = e.target.getAttribute('data-id');
       const productoSeleccionado = productosGuardados.find(p => p.id == idProducto);
       mostrarDetallesProducto(productoSeleccionado);
-      aside.classList.remove('oculto'); 
-    });
+    }
+  });
+
+  filtrarBtn.addEventListener('click', filtrarProductos);
+  limpiarFiltrosBtn.addEventListener('click', () => {
+    filtro1.value = '';
+    filtroProveedor.value = '';
+    catalogo.innerHTML = ''; // Limpiar catálogo
+    productosCargados = 0; // Reiniciar contador
+    cargarProductos(productosGuardados); // Cargar todos los productos
   });
 });
 
-function mostrarDetallesProducto(producto) {
-  if (producto) { 
-    document.getElementById('imagenGrande').src = producto.img;
-    document.getElementById('nombreArtGrande').textContent = producto.nombre;
-    document.getElementById('proveedor').textContent = `${producto.proveedor}`;
-    document.getElementById('stockGrande').textContent = `Stock: ${producto.stock}`;
-    document.getElementById('idProducto').textContent = `ID: ${producto.id}`;
-    document.getElementById('precioGrande').textContent = `Precio: $${producto.precio.toLocaleString('es-CO')}`;
-    document.getElementById('categoria').textContent = `Categoría: ${producto.categoria}`;
+
+function agregarAlCarrito(producto) {
+  const cantidad = document.getElementById('cantidad').value;
+  const productoCarrito = {
+      ...producto,
+      cantidad: parseInt(cantidad)
+  };
+
+  // Obtener el carrito actual o inicializarlo
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  // Verificar si el producto ya está en el carrito
+  const indiceExistente = carrito.findIndex(item => item.id === productoCarrito.id);
+  if (indiceExistente > -1) {
+      // Si ya existe, actualizar la cantidad
+      carrito[indiceExistente].cantidad += productoCarrito.cantidad;
   } else {
-    console.error('Producto no encontrado');
+      // Si no existe, agregarlo al carrito
+      carrito.push(productoCarrito);
   }
+
+  // Guardar el carrito actualizado en localStorage
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  alert(`${producto.nombre} agregado al carrito!`);
 }

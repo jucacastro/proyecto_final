@@ -3,74 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrito de compras</title>
+    <title>Carrito de Compras</title>
     <link rel="stylesheet" href="../CSS/carrito.css">
 </head>
 <body>
-        <header class="encabezado">   
-            <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
-            <h1> CARRITO DE COMPRAS GLOBAL GYM</h1>
-
+    <header class="encabezado">   
+        <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
+        <h1> CARRITO DE COMPRAS GLOBAL GYM</h1>
     </header>
-    <main class="principal" >
+    <main class="principal">
         <section>
             <table>
                 <thead>
-                 <tr>
-                     <th>Imagen</th>
-                     <th>Nombre</th>
-                     <th>Precio</th>
-                     <th>Stock</th>
-                 </tr>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>eliminar</th> 
+                    </tr>
                 </thead>
-                
                 <tbody>
-                <tr>
-                 <td id="img"></td>
-                 <td id="nombre"></td>
-                 <td id="precio"></td>
-                 <td id="stock"></td>
-                </tr>
+                    <tr>
+                        <td id="img"></td>
+                        <td id="nombre"></td>
+                        <td id="precio"></td>
+                        <td id="stock"></td>
+                    </tr>
                 </tbody>
-                
-             </table>
-
+            </table>
         </section>
-           <aside>
-            <label for="tarjeta">ingrese su numero de tarjeta</label>
-            <input type="number" id="tarjeta" name="tarjeta" min="13" max="19">
-            <label for="tarjeta">fecha de expiracion</label>
-            <input type="number" id="fecha-exp" name="fechaExp" >
-            <label for="tarjeta">codigo de seguridad</label>
-            <input type="password" id="codigo-seguridad" name="codigo-seguridad" >
-            <select id="tipo-tarjeta"> 
-                <option id="masterCard">MasterCard</option>
-                 <option id="visa">Visa</option>
-                 <option id="prepagada">Prepagada</option>
-              </select>
-              <select id="tipo-tarjeta"> 
-                <option id="colombia">Colombia</option>
-                 <option id="estados-unidos">Estados Unidos</option>
-                 <option id="canada">Canada</option>
-                 <option value="españa">España</option>
-                 <option value="francia">Francia</option>
-                 <option value="chile">chile</option>
-                 <option value="argentina">Argentina</option>
-                 <option value="inglaterra">Inglaterra</option>
-                 <option value="portugal">Portugal</option>
-                 <option value="brasil">Brasil</option>
-              </select><br>
-              <label for="nombre-titular">ingrese el nombre del titular</label>
-            <input type="text" id="nombre-titular" name="nombre-titular">
+        <aside>
+            <label for="tarjeta">Ingrese su número de tarjeta</label>
+            <input type="number" id="tarjeta" name="tarjeta"  placeholder="13 a 19 dígitos" title="Debe tener entre 13 y 19 dígitos" required>
+
+            <label for="fecha-exp">Fecha de Expiración</label>
+            <input type="text" id="fecha-exp" name="fechaExp" pattern="\d{2}/\d{2}" placeholder="MM/AA" title="Formato MM/AA" required>
+
+            <label for="codigo-seguridad">Código de Seguridad</label>
+            <input type="password" id="codigo-seguridad" name="codigo-seguridad" pattern="\d{3}" maxlength="3" title="Debe tener 3 dígitos" required>
+            <button type="button" onclick="alternarVisibilidad()">👀</button>
+
+            <label for="tipo-tarjeta">Tipo de Tarjeta</label>
+            <select id="tipo-tarjeta">
+                <option>MasterCard</option>
+                <option>Visa</option>
+                <option>Prepagada</option>
+            </select>
+
+            <label for="pais-emision">País de Emisión</label>
+            <select id="pais-emision">
+                <option>Colombia</option>
+                <option>Estados Unidos</option>
+                <option>Canadá</option>
+                <option>España</option>
+                <option>Francia</option>
+                <option>Chile</option>
+                <option>Argentina</option>
+                <option>Inglaterra</option>
+                <option>Portugal</option>
+                <option>Brasil</option>
+            </select>
+
+            <label for="nombre-titular">Nombre del Titular</label>
+            <input type="text" id="nombre-titular" name="nombre-titular" title="Debe tener entre 13 y 19 dígitos">
+
             <div class="contenedor-botones">
-                <a id="completar-compra" href="../HTML/registro.html"> completarcompra</a>
-                <button class="boton" onclick="limpiarCampos()"> limpiar campos</button>
+                <a id="completar-compra" href="../HTML/registro.html">Completar Compra</a>
+                <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
             </div>
-           </aside>
+        </aside>
     </main>
     <footer class="pie-pagina">
-        <p> @ creado por juan carlos 2024</p>
+        <p>@ Creado por Juan Carlos 2024</p>
     </footer>
-
+    <script src="../JS/carrito.js"></script>
 </body>
 </html>

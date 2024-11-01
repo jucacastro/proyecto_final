@@ -12,23 +12,24 @@
     <img class="logo" src="../IMG/logo.jpg" alt="imagen logo">
     <p>Podrás observar todo el catálogo de productos que tenemos para ofrecerte.</p>
   </header>
+  
   <nav class="navegador">
     <a href="../HTML/registro.html">Cancelar Compra</a>
-    <a href="../HTML/carrito">Completar Compra</a>
+    <a href="../HTML/carrito.html">Completar Compra</a>
     <select id="filtro1">
-      <option id="categoria">categoria</option>
-       <option id="precuo">precio</option>
+      <option value="">Filtrar por Categoría</option>
+      <option value="suplementos">Suplementos</option>
+      <option value="deportivo">Deportivo</option>
     </select>
     <div id="filtro2">
-      <input type="text" id="filtro-proveedor" placeholder="filtro-proveedor" >
+      <input type="text" id="filtro-proveedor" placeholder="Filtro por proveedor">
     </div>
-    <button>Filtrar</button>
-    <button>Limpiar Filtros</button>
+    <button id="filtrar-btn">Filtrar</button>
+    <button id="limpiar-filtros">Limpiar Filtros</button>
   </nav>
 
   <main class="principal">
-    <section class="catalogo">
-    </section>
+    <section class="catalogo"></section>
     <aside class="oculto">
       <article class="detalle-producto">
         <img id="imagenGrande" alt="">
@@ -36,16 +37,16 @@
         <span id="proveedor"></span>
         <span id="stockGrande"></span>
         <p id="idProducto"></p>
-        <span id="precioGrande"></span> <!-- Cambia esto a 'precioGrande' -->
+        <span id="precioGrande"></span> 
         <p id="categoria"></p>
-        <label for="cantidad">cantidad a comprar</label>
-        <input type="number" id="cantidad" name="cantidad" min="1" max="20">
-        <button id="agregar-carrito">agregar al carrito</button>
+        <label for="cantidad">Cantidad a comprar:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required>
+        <button id="agregar-carrito">Agregar al carrito</button>
       </article>
-  
     </aside>
   </main>
   
   <script src="../JS/productos.js"></script>
 </body>
 </html>
+
