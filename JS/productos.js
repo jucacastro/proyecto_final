@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('idProducto').textContent = `ID: ${producto.id}`;
         document.getElementById('precioGrande').textContent = `Precio: $${producto.precio.toLocaleString('es-CO')}`;
         document.getElementById('categoria').textContent = `Categoría: ${producto.categoria}`;
-        aside.classList.remove('oculto'); // Mostrar el aside al seleccionar un producto
+        aside.classList.remove('oculto'); 
         
-        // Asignar evento al botón de agregar al carrito
+      
         const agregarCarritoBtn = document.getElementById('agregar-carrito');
         agregarCarritoBtn.onclick = () => agregarAlCarrito(producto);
     } else {
@@ -119,15 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return coincideCategoria && coincideProveedor; // Filtra productos que coincidan con ambos
     });
 
-    catalogo.innerHTML = ''; // Limpiamos el catálogo antes de cargar productos filtrados
-    productosCargados = 0; // Reiniciar contador de productos cargados
-    cargarProductos(productosFiltrados); // Cargar productos filtrados
+    catalogo.innerHTML = ''; 
+    productosCargados = 0; 
+    cargarProductos(productosFiltrados); 
   }
 
   window.addEventListener('scroll', scrollInfinito);
   cargarProductos(productosGuardados);
 
-  // Delegación de eventos para los botones de ver detalles
+
   catalogo.addEventListener('click', (e) => {
     if (e.target.classList.contains('ver-detalles')) {
       const idProducto = e.target.getAttribute('data-id');
@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
   limpiarFiltrosBtn.addEventListener('click', () => {
     filtro1.value = '';
     filtroProveedor.value = '';
-    catalogo.innerHTML = ''; // Limpiar catálogo
-    productosCargados = 0; // Reiniciar contador
-    cargarProductos(productosGuardados); // Cargar todos los productos
+    catalogo.innerHTML = ''; 
+    productosCargados = 0; 
+    cargarProductos(productosGuardados); 
   });
 });
 

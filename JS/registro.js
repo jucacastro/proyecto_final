@@ -16,17 +16,13 @@ document.getElementById("iniciarCompra").addEventListener("click", function(vali
         return;
     }
 
-    if (nombreComprador.length > 20) {
-        alert("El nombre debe ser solo texto y no exceder los 20 caracteres.");
-        return;
-    }
 
     if (isNaN(presupuestoMaximo) || presupuestoMaximo <= 0) {
         alert("El presupuesto máximo debe ser un número positivo en pesos.");
         return;
     }
 
-    if (isNaN(cantidadMaxima) || cantidadMaxima <= 0 || cantidadMaxima > 20) {
+    if (isNaN(cantidadMaxima) || cantidadMaxima <= 0 ) {
         alert("La cantidad máxima de productos debe ser un número positivo y no exceder los 20 productos.");
         return;
     }
@@ -47,5 +43,3 @@ function limpiarCampos() {
     document.getElementById("direccion").value = "";
     document.querySelectorAll('input[name="estado"]').forEach(radio => radio.checked = false);
 }
-
-

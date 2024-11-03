@@ -27,12 +27,17 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3">Total</td>
-                        <td id="total-precio" colspan="2">$0</td>
+                        <td colspan="3">
+                            <label>
+                                <input type="checkbox" id="checkbox-domicilio">
+                                Incluir domicilio por $15,000
+                            </label>
+                        </td>
+                        <td>Total</td>
+                        <td id="total-precio">$0</td>
                     </tr>
                 </tfoot>
             </table>
-            
         </section>
         <aside>
             <label for="tarjeta">Ingrese su número de tarjeta</label>
@@ -70,7 +75,7 @@
             <input type="text" id="nombre-titular" name="nombre-titular" title="Debe tener entre 13 y 19 dígitos">
 
             <div class="contenedor-botones">
-                <a id="completar-compra" href="../HTML/registro.html">Seguir Comprando</a>
+                <button id="completar-compra">Completar Compra</button>
                 <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
             </div>
         </aside>
