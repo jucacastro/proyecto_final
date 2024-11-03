@@ -29,7 +29,7 @@
 
 *En la CARPETA HTML encontraras las 3 vistas necesarias para el proyecto, **registro.html, listaProductos.html** y **carritoCompras.html**
 
-![css](rut[a/imagen.jpg](https://photos.fife.usercontent.google.com/pw/AP1GczPAEPjBb1hZOM3oA1fmV0cXHxwSe29cQaL5zoUAx2hUgcjeWA7i8MQ=w216-h112-s-no-gm?authuser=0))
+![css](WhatsApp Image 2024-11-02 at 9.15.35 PM))
 
 *En la CARPETA CSS encontraras los 3 documentos necesarios para los estilos del proyecto, **registro.css, listaProductos.css** y **carritoCompras.css**
 
