@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
- 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const tbody = document.querySelector('tbody');
     const totalPrecioElem = document.getElementById('total-precio');
     const costoDomicilio = 15000;
     let total = 0;
 
-   
     tbody.innerHTML = '';
     carrito.forEach((producto, index) => {
         const row = document.createElement('tr');
@@ -23,50 +21,64 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.appendChild(row);
     });
 
-   
     if (carrito.length === 0) {
         const mensaje = document.createElement('tr');
         mensaje.innerHTML = `<td colspan="5">El carrito está vacío ☹️</td>`;
         tbody.appendChild(mensaje);
     }
 
-  
     totalPrecioElem.textContent = `$${total.toLocaleString('es-CO')}`;
 
-   
     const checkboxDomicilio = document.getElementById("checkbox-domicilio");
     checkboxDomicilio.addEventListener("change", () => {
         const totalConDomicilio = checkboxDomicilio.checked ? total + costoDomicilio : total;
         totalPrecioElem.textContent = `$${totalConDomicilio.toLocaleString('es-CO')}`;
     });
 
- 
     tbody.addEventListener('click', (e) => {
         if (e.target.classList.contains('eliminar')) {
-            const index = e.target.getAttribute('data-index');
-            eliminarProductoDelCarrito(index);
+            const posicion = e.target.getAttribute('data-index');
+            eliminarProductoDelCarrito(posicion);
         }
     });
 
-   
     const botonCompra = document.getElementById("completar-compra");
     botonCompra.addEventListener("click", function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
         botonCompra.disabled = true;
 
-        const tarjeta = document.getElementById("tarjeta").value;
+       
+        const fechaExp = document.getElementById("fecha-exp").value;
         const presupuestoMaximo = parseInt(localStorage.getItem("presupuestoMaximo").replace(/[^0-9]/g, ''));
         const cantidadMaxima = parseInt(localStorage.getItem("cantidadMaxima"));
         const cantidadTotal = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
         const totalConDomicilio = checkboxDomicilio.checked ? total + costoDomicilio : total;
 
+      
+        const regexFechaExp = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        if (!regexFechaExp.test(fechaExp)) {
+            alert("Fecha de expiración no válida. Use el formato MM/AA.");
+            botonCompra.disabled = false;
+            return;
+        }
+
+        
+        const [mes, anio] = fechaExp.split('/').map(num => parseInt(num, 10));
+        const fechaActual = new Date();
+        const anioActual = fechaActual.getFullYear() % 100; 
+        const mesActual = fechaActual.getMonth() + 1;
+
+        if (anio < anioActual || (anio === anioActual && mes < mesActual)) {
+            alert("La tarjeta ha expirado.");
+            botonCompra.disabled = false;
+            return;
+        }
+
         const validarCompra = new Promise((resolve, reject) => {
-            const tiempoEspera = Math.floor(Math.random() * 1000) + 2000; 
+            const tiempoEspera = Math.floor(Math.random() * 1000) + 2000;
             setTimeout(() => {
-                if (!tarjeta || tarjeta.length < 13 || tarjeta.length > 19) {
-                    reject("Número de tarjeta incorrecto.");
-                } else if (cantidadTotal > cantidadMaxima) {
+                if (cantidadTotal > cantidadMaxima) {
                     reject("La cantidad de productos supera el límite permitido.");
                 } else if (totalConDomicilio > presupuestoMaximo) {
                     reject("El presupuesto máximo ha sido superado.");
@@ -79,15 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
         validarCompra
             .then((mensajeExito) => {
                 alert(mensajeExito);
-                window.location.href = "../HTML/registro.html"; 
+                window.location.href = "../HTML/registro.html";
             })
             .catch((errorMensaje) => {
                 alert(errorMensaje);
-                botonCompra.disabled = false; 
+                botonCompra.disabled = false;
             });
     });
 
-   
     document.querySelectorAll("button, input, select").forEach(elemento => {
         elemento.addEventListener("click", (e) => {
             if (botonCompra.disabled && e.target.id !== "completar-compra") {
@@ -98,14 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-function eliminarProductoDelCarrito(index) {
+function eliminarProductoDelCarrito(posicion) {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito.splice(index, 1);
+    carrito.splice(posicion, 1);
     localStorage.setItem('carrito', JSON.stringify(carrito));
     location.reload();
 }
-
 
 function limpiarCampos() {
     document.getElementById("tarjeta").value = "";
@@ -116,9 +125,7 @@ function limpiarCampos() {
     document.getElementById("pais-emision").selectedIndex = 0;
 }
 
-
 function alternarVisibilidad() {
     const codigoInput = document.getElementById("codigo-seguridad");
     codigoInput.type = codigoInput.type === "password" ? "text" : "password";
 }
-
