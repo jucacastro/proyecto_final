@@ -45,6 +45,7 @@ const productos = [
 
 
 localStorage.setItem('productos', JSON.stringify(productos));
+
 document.addEventListener('DOMContentLoaded', () => {
   const productosGuardados = JSON.parse(localStorage.getItem('productos'));
   const catalogo = document.querySelector('.catalogo');
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     productosCargados = 0; 
     cargarProductos(productosFiltrados); 
     window.removeEventListener('scroll', scrollInfinito);
-    scrollActivo = true; 
+    
   }
 
   window.addEventListener('scroll', scrollInfinito);
@@ -153,6 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function agregarAlCarrito(producto) {
   const cantidad = document.getElementById('cantidad').value;
+
+  if (isNaN(cantidad) || cantidad <= 0) {
+    alert("La cantidad debe ser un número positivo.");
+    return;
+}
   const productoCarrito = {
       ...producto,
       cantidad: parseInt(cantidad)

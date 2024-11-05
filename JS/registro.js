@@ -16,17 +16,22 @@ document.getElementById("iniciarCompra").addEventListener("click", function(vali
         return;
     }
 
+    if (nombreComprador.length > 20) {
+        alert("El nombre del comprador no debe superar los 20 caracteres.");
+        return;
+    }
 
     if (isNaN(presupuestoMaximo) || presupuestoMaximo <= 0) {
         alert("El presupuesto máximo debe ser un número positivo en pesos.");
         return;
     }
 
-    if (isNaN(cantidadMaxima) || cantidadMaxima <= 0 ) {
-        alert("La cantidad máxima de productos debe ser un número positivo y no exceder los 20 productos.");
+    if (isNaN(cantidadMaxima) || cantidadMaxima <= 0 || cantidadMaxima > 20) {
+        alert("La cantidad máxima de productos debe ser un número positivo y no debe exceder los 20 productos.");
         return;
     }
 
+  
     localStorage.setItem("nombreComprador", nombreComprador);
     localStorage.setItem("presupuestoMaximo", `$${parseInt(presupuestoMaximo).toLocaleString('es-CO')}`);
     localStorage.setItem("cantidadMaxima", cantidadMaxima);
