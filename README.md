@@ -34,6 +34,7 @@
 ![image](https://github.com/user-attachments/assets/074eafdf-f386-4791-bf4b-e32bf127c8dc)
 
 *En la CARPETA JS encontraras las 3 documentos javaScript necesarios para el proyecto, **registro.js, listaProductos.js** y **carritoCompras.js** *(esto realmente no lo he definido bien, puede cambiar en el futuro)*
+![image](https://github.com/user-attachments/assets/a43649c7-3caf-4cc3-9bcd-2090747e2261)
 
 # vista de las 3 interfaces del ecommerce las cuales interactuaran con el usuario
 
