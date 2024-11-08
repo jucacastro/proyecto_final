@@ -1,6 +1,6 @@
 # PROYECTO FINAL FUNDAMENTOS
 
-*En este proyecto encontras el codigo **html,css y js y json** de un ecommerce de una tienda de suplementacion y accesorios deportivos*
+*En este proyecto encontras el codigo **html,css y js** de un ecommerce de una tienda de suplementacion y accesorios deportivos*
 *Este proyecto nos permitira lograr poner en practica todos nuestros conocimientos adquiridos en esta materia, los cuales son:*
 
 ### HTML
