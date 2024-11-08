@@ -1,4 +1,5 @@
-document.getElementById("iniciarCompra").addEventListener("click", function(validar) {
+const iniciarCompra = document.getElementById("iniciar-Compra");
+iniciarCompra.addEventListener("click", function(validar) {
     validar.preventDefault();
 
     const nombreComprador = document.getElementById("nComprador").value;
@@ -40,6 +41,8 @@ document.getElementById("iniciarCompra").addEventListener("click", function(vali
 
     window.location.href = "../HTML/listadoProductos.html";
 });
+
+
 
 function limpiarCampos() {
     document.getElementById("nComprador").value = "";

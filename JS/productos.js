@@ -24,23 +24,23 @@ const productos = [
   { id: 21, nombre: "Guantes de gimnasio M", stock: 18, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
   { id: 22, nombre: "Guantes de gimnasio L", stock: 15, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
   { id: 23, nombre: "Guantes de gimnasio XL", stock: 12, img: "../IMG/guantes.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
-  { id: 24, nombre: "Rodillera deportiva", stock: 30, img: "../IMG/rodillera.jpg", categoria: "deportivo", precio: 50000, proveedor: "sport line" },
-  { id: 25, nombre: "Muñequera de soporte", stock: 25, img: "../IMG/muñequera.jpg", categoria: "deportivo", precio: 25000, proveedor: "sport line" },
-  { id: 26, nombre: "Soporte de codo", stock: 20, img: "../IMG/soporte-codo.jpg", categoria: "deportivo", precio: 20000, proveedor: "sport line" },
-  { id: 27, nombre: "Protector de muñeca", stock: 20, img: "../IMG/muñequera.jpg", categoria: "deportivo", precio: 15000, proveedor: "sport line" },
-  { id: 28, nombre: "Liga de resistencia baja", stock: 30, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 20000, proveedor: "sport line" },
-  { id: 29, nombre: "Liga de resistencia media", stock: 25, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 25000, proveedor: "sport line" },
-  { id: 30, nombre: "Liga de resistencia alta", stock: 20, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 30000, proveedor: "sport line" },
-  { id: 31, nombre: "Tapete de yoga", stock: 15, img: "../IMG/tapete.jpg", categoria: "deportivo", precio: 45000, proveedor: "sport line" },
-  { id: 32, nombre: "Botella de agua 500 ml", stock: 30, img: "../IMG/agua-general.jpg", categoria: "suplementos", precio: 15000, proveedor: "sport line" },
-  { id: 33, nombre: "Botella de agua 1 L", stock: 25, img: "../IMG/agua-general.jpg", categoria: "suplementos", precio: 25000, proveedor: "sport line" },
-  { id: 34, nombre: "Toalla de microfibra", stock: 20, img: "../IMG/toalla.jpg", categoria: "deportivo", precio: 20000, proveedor: "sport line" },
-  { id: 35, nombre: "Banda elástica", stock: 30, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 12000, proveedor: "sport line" },
-  { id: 36, nombre: "Cuerda para saltar", stock: 25, img: "../IMG/cuerda.jpg", categoria: "deportivo", precio: 25000, proveedor: "sport line" },
-  { id: 37, nombre: "Rodillo de espuma", stock: 20, img: "../IMG/rodillo.jpg", categoria: "deportivo", precio: 35000, proveedor: "sport line" },
-  { id: 38, nombre: "Balón medicinal 5 kg", stock: 10, img: "../IMG/balon.jpg", categoria: "deportivo", precio: 45000, proveedor: "sport line" },
-  { id: 39, nombre: "Banda de compresión", stock: 18, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 30000, proveedor: "sport line" },
-  { id: 40, nombre: "Banda de resistencia alta", stock: 15, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 40000, proveedor: "sport line" },
+  { id: 24, nombre: "Rodillera deportiva", stock: 30, img: "../IMG/rodillera.jpg", categoria: "deportivo", precio: 50000, proveedor: "global line" },
+  { id: 25, nombre: "Muñequera de soporte", stock: 25, img: "../IMG/muñequera.jpg", categoria: "deportivo", precio: 25000, proveedor: "global line" },
+  { id: 26, nombre: "Soporte de codo", stock: 20, img: "../IMG/soporte-codo.jpg", categoria: "deportivo", precio: 20000, proveedor: "global line" },
+  { id: 27, nombre: "Protector de muñeca", stock: 20, img: "../IMG/muñequera.jpg", categoria: "deportivo", precio: 15000, proveedor: "global line" },
+  { id: 28, nombre: "Liga de resistencia baja", stock: 30, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 20000, proveedor: "global line" },
+  { id: 29, nombre: "Liga de resistencia media", stock: 25, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 25000, proveedor: "global line" },
+  { id: 30, nombre: "Liga de resistencia alta", stock: 20, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
+  { id: 31, nombre: "Tapete de yoga", stock: 15, img: "../IMG/tapete.jpg", categoria: "deportivo", precio: 45000, proveedor: "global line" },
+  { id: 32, nombre: "Botella de agua 500 ml", stock: 30, img: "../IMG/agua-general.jpg", categoria: "suplementos", precio: 15000, proveedor: "global line" },
+  { id: 33, nombre: "Botella de agua 1 L", stock: 25, img: "../IMG/agua-general.jpg", categoria: "suplementos", precio: 25000, proveedor: "global line" },
+  { id: 34, nombre: "Toalla de microfibra", stock: 20, img: "../IMG/toalla.jpg", categoria: "deportivo", precio: 20000, proveedor: "global line" },
+  { id: 35, nombre: "Banda elástica", stock: 30, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 12000, proveedor: "global line" },
+  { id: 36, nombre: "Cuerda para saltar", stock: 25, img: "../IMG/cuerda.jpg", categoria: "deportivo", precio: 25000, proveedor: "global line" },
+  { id: 37, nombre: "Rodillo de espuma", stock: 20, img: "../IMG/rodillo.jpg", categoria: "deportivo", precio: 35000, proveedor: "global line" },
+  { id: 38, nombre: "Balón medicinal 5 kg", stock: 10, img: "../IMG/balon.jpg", categoria: "deportivo", precio: 45000, proveedor: "global line" },
+  { id: 39, nombre: "Banda de compresión", stock: 18, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 30000, proveedor: "global line" },
+  { id: 40, nombre: "Banda de resistencia alta", stock: 15, img: "../IMG/ligas.jpg", categoria: "deportivo", precio: 40000, proveedor: "global line" },
 ];
 
 
@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function filtrarProductos() {
     estadoScroll = false;
     const categoriaSeleccionada = filtro1.value.trim();
-    const proveedorSeleccionado = filtroProveedor.value.trim().toLowerCase();
+    const proveedorSeleccionado = filtroProveedor.value;
+
 
     productosFiltrados = productosGuardados.filter(producto => {
       const coincideCategoria = categoriaSeleccionada ? producto.categoria === categoriaSeleccionada : true;
@@ -174,6 +175,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   localStorage.setItem('carrito', JSON.stringify(carrito));
-  alert(`${producto.nombre} agregado al carrito!`);
+  alert(`${producto.nombre}, AGREGADO AL CARRITO 👌🏼!`);
   }
 });
+
+
+
+
