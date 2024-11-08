@@ -38,6 +38,7 @@
 
 # vista de las 3 interfaces del ecommerce las cuales interactuaran con el usuario
 
+
 # VISTA rigistro.HTML
 *en este espacio el usuario podrá ingresar sus datos, los cuales estaran almacenados en el locaStorage, debera completar todo el registro para
 *poder pasar a la siguiente vista

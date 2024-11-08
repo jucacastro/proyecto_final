@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${producto.nombre}</td>
             <td>$${subtotal.toLocaleString('es-CO')}</td>
             <td>${producto.cantidad}</td>
-            <td><button class="eliminar" data-index="${index}">Eliminar</button></td>
+            <td><button class="eliminar" data-index="${index}">🗑️</button></td>
         `;
         tbody.appendChild(row);
     });
