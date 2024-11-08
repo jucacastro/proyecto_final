@@ -53,8 +53,8 @@
 * de lo contrario, le dirá cual fue su error para poderlo corregir.
 ![image](https://github.com/user-attachments/assets/c0f3d2f7-0da6-4300-92a9-95632aefe12e)
 
-*espero este proyecto sea de su agrada, la idea es poder mejorar asi que cualquier ayuda es positiva
-chau...
+*espero este proyecto sea de su agrado, la idea es poder mejorar, asi que cualquier ayuda es positiva
+chau...*
 
 
 
