@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productosParaMostrar = productosParaCargar.slice(productosCargados, productosCargados + productosPorPagina);
 
     if (productosParaMostrar.length === 0) {
-      alert("No hay más productos para mostrar.");
+      alert("No hay más productos para mostrar.☹️");
       window.removeEventListener('scroll', scrollInfinito);
       return;
     }

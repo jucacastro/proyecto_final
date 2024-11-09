@@ -127,5 +127,9 @@ function limpiarCampos() {
 
 function alternarVisibilidad() {
     const codigoInput = document.getElementById("codigo-seguridad");
-    codigoInput.type = codigoInput.type === "password" ? "text" : "password";
+    if (codigoInput.type === "password") {
+        codigoInput.type= "text";
+    } else {
+        codigoInput.type="password";
+    }
 }
