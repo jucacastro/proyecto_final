@@ -52,7 +52,8 @@
 * y por supuesto, llenará los campos para pagar con la tarjeta de credito, si el usuario cumplio con todos los requerimiento
 * la pagina le dirá que el pago fue exitoso y lo llevará al inicio de la pagina donde podra seguir comprando
 * de lo contrario, le dirá cual fue su error para poderlo corregir.
-![image](https://github.com/user-attachments/assets/c0f3d2f7-0da6-4300-92a9-95632aefe12e)
+![image](https://github.com/user-attachments/assets/12efded3-c84d-49ed-85eb-16c8d3bbf183)
+
 
 *espero este proyecto sea de su agrado, la idea es poder mejorar, asi que cualquier ayuda es positiva
 chau...*
