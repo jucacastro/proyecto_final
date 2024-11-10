@@ -48,10 +48,10 @@
 ![image](https://github.com/user-attachments/assets/3afa86d6-afe1-43ab-adf9-caba67d6dc82)
 )
 # VISTA carrito.HTML
-*en esta espacio el usuario podrá concretar la compra de sus productos, podra eliminar los productos que a ultima hora no quiera
-*y por supuesto, llenará los campos para pagar con la tarjeta de credito, si el usuario cumplio con todos los requerimiento
-*la pagina le dirá que el pago fue exitoso y lo llevará al inicio de la pagina donde podra seguir comprando
-*de lo contrario, le dirá cual fue su error para poderlo corregir.
+*en esta espacio el usuario podrá concretar la compra de sus productos, podra eliminar los productos que a* *ultima hora no quiera*
+*y por supuesto, llenará los campos para pagar con la tarjeta de credito, si el usuario cumplio con todos* *los requerimiento*
+*la pagina le dirá que el pago fue exitoso y lo llevará al inicio de la pagina donde podra seguir comprando*
+*de lo contrario, le dirá cual fue su error para poderlo corregir.*
 ![image](https://github.com/user-attachments/assets/12efded3-c84d-49ed-85eb-16c8d3bbf183)
 
 
