@@ -36,6 +36,21 @@ h1 {
     margin: 10px 0;
 }
 
+.boton-regresar{
+    background-color: #07f507;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.boton-regresar:hover{
+    background-color: #15671c;
+}
+
+
 .principal {
     display: flex;
     max-width: 1200px;

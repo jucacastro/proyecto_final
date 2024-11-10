@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const costoDomicilio = 15000;
     let total = 0;
 
+   
+    const metodoEntrega = localStorage.getItem('entregaSeleccionada');
+    const checkboxDomicilio = document.getElementById("checkbox-domicilio");
+    
+    
+    if (metodoEntrega === 'domicilio') {
+        checkboxDomicilio.checked = true;
+    }
+
     tbody.innerHTML = '';
     carrito.forEach((producto, index) => {
         const row = document.createElement('tr');
@@ -27,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.appendChild(mensaje);
     }
 
-    totalPrecioElem.textContent = `$${total.toLocaleString('es-CO')}`;
+    
+    const totalInicial = checkboxDomicilio.checked ? total + costoDomicilio : total;
+    totalPrecioElem.textContent = `$${totalInicial.toLocaleString('es-CO')}`;
 
-    const checkboxDomicilio = document.getElementById("checkbox-domicilio");
     checkboxDomicilio.addEventListener("change", () => {
         const totalConDomicilio = checkboxDomicilio.checked ? total + costoDomicilio : total;
         totalPrecioElem.textContent = `$${totalConDomicilio.toLocaleString('es-CO')}`;
