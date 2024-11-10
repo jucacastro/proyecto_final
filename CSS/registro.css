@@ -38,6 +38,10 @@ h1 {
 .logo {
     width: 150px;
     height: 150px;
+    transition: transform 0.3s ease;
+}
+.logo:hover{
+transform: translateY(-8px) scale(1.1);
 }
 
 .principal {
