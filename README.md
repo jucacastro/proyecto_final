@@ -46,7 +46,7 @@
 # VISTA listaProductos.HTML
 *en esta vista, el usuario tendrá acceso al catalogo de productos de BODY GYM, podras filtrar por Categoria(suplementos,deportivo) y por proveedor
 ![image](https://github.com/user-attachments/assets/3afa86d6-afe1-43ab-adf9-caba67d6dc82)
-)
+
 # VISTA carrito.HTML
 *en esta espacio el usuario podrá concretar la compra de sus productos, podra eliminar los productos que a* *ultima hora no quiera*
 *y por supuesto, llenará los campos para pagar con la tarjeta de credito, si el usuario cumplio con todos* *los requerimiento*
